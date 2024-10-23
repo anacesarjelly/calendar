@@ -103,9 +103,15 @@
         }
 
         /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+            #calendar {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+            }
+        }
+
         @media (max-width: 768px) {
             #calendar {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
             }
 
             .days div {
@@ -140,47 +146,7 @@
 
 <script>
     const events = {
-        "January": {
-            6: { title: "Vegas Meetup", location: "Las Vegas" },
-            7: { title: "Vegas Meetup", location: "Las Vegas" },
-            8: { title: "Vegas Meetup", location: "Las Vegas" },
-            8: { title: "Vegas Meetup", location: "Las Vegas" },
-        },
-        "April": {
-            7: { title: "Vegas Meetup", location: "Las Vegas" },
-            8: { title: "Vegas Meetup", location: "Las Vegas" },
-            9: { title: "Vegas Meetup", location: "Las Vegas" },
-            10: { title: "Vegas Meetup", location: "Las Vegas"},
-        },
-        "June": {
-            14: { title: "LA Meetup", location: "Los Angeles" },
-            15: { title: "LA Meetup", location: "Los Angeles" },
-            16: { title: "LA Meetup", location: "Los Angeles" },
-            17: { title: "LA Meetup", location: "Los Angeles" },
-            23: { title: "On Location Trip for Hustlers/Earnings" },
-            24: { title: "On Location Trip for Hustlers/Earnings" },
-            25: { title: "On Location Trip for Hustlers/Earnings" },
-            26: { title: "On Location Trip for Hustlers/Earnings" },
-        },
-        "September": {
-            29: { title: "Vegas Meetup", location: "Las Vegas" },
-            30: { title: "Vegas Meetup", location: "Las Vegas" },
-        },
-        "October": {
-            1: { title: "Vegas Meetup", location: "Las Vegas" },
-            2: { title: "Vegas Meetup", location: "Las Vegas" },
-            13: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            14: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            15: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            16: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            17: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            18: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            19: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-            20: { title: "Vegas VIP/Netty", location: "Las Vegas" },
-        },
-        "December": {
-            9: { title: "Christmas", location: "Elly and Rick's" },
-        }
+        // Seus eventos aqui
     };
 
     const months = [
